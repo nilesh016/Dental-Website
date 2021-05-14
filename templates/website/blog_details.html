@@ -1,0 +1,217 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+   <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Blog Details</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+  <!-- ****** Blog Area Start ******* -->
+  <section class="dento--blog-area mt-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 mb-100">
+          <!-- Blog Details Area -->
+          <div class="blog-details-area">
+            <img src="{% static 'website/img/bg-img/24.jpg' %}" alt="">
+
+            <h2 class="post-title">How your mouth bacteria can harm lungs</h2>
+            <div class="post-meta">
+              <a href="#"><i class="icon_clock_alt"></i>1 APril 2021</a>
+              <a href="#"><i class="icon_chat_alt"></i> 400+ Comments</a>
+            </div>
+            <p>In a healthy mouth, over 700 different bacteria exist in balance. Some of these are beneficial, and others can be harmful. When bacteria grow out of control, they can pose problems for teeth, gums, and the rest of the mouth. If you don't keep up with oral hygiene or leave cavities or gingivitis untreated, this bacteria can start to affect the rest of the body, including the lungs and heart.</p>
+            <blockquote cite="" class="dento-blockquote d-flex">
+              <div class="icon">
+                <i class="fa fa-quote-left"></i>
+              </div>
+              <div class="text">
+                <h5>Good dental care doesn't make you a good student, but if your tooth hurts, it's hard to be a good student</h5>
+                <h6>Geoffrey Canada / <span>Social Activist</span></h6>
+              </div>
+            </blockquote>
+            <p>The best way to prevent harmful bacteria overgrowth in the mouth is to practice good oral hygiene. Brush twice a day with fluoride toothpaste, clean between your teeth daily with floss, flossers, or interdental brushes, and keep dental checkups with your dentist and dental hygienist. Your dental hygienist may also recommend using an antiseptic mouthrinse as well.
+
+This information may seem concerning. But the good news is that preventive care and good hygiene habits can prevent gum disease and prevent it from causing problems in other parts of your body. Working with your primary care physician or specialist in treating any issues that occur promptly can help prevent lasting damage to your lungs.</p>
+            <img src="{% static 'website/img/bg-img/25.jpg' %}" alt="">
+            <p>An overgrowth of the harmful bacteria can cause tooth decay, inflamed, bleeding gums, and similar dental problems. When those issues are untreated, you may get an infection. The bacteria can further spread to your lungs, heart, and other systems. For example, this bacteria can cause bronchitis and pneumonia and worsen conditions such as emphysema and chronic obstructive pulmonary disease. Talk to your physician or dentist if you're having trouble breathing or have a cough that won't go away.</p>
+          </div>
+
+          <!-- Post Share  -->
+          <div class="post-share-area mb-30">
+            <a target='_blank' href="https://facebook.com" class="facebook"><i class="fa fa-facebook"></i> Share</a>
+            <a target='_blank' href="https://twitter.com" class="tweet"><i class="fa fa-twitter"></i> Tweet</a>
+            <a target='_blank' href="https://googleplus.com" class="google-plus"><i class="fa fa-google-plus"></i> Share</a>
+            <a target='_blank' href="https://pintrest.com" class="pinterest"><i class="fa fa-pinterest"></i> Share</a>
+          </div>
+
+          <!-- Comments Area -->
+          <div class="comment_area clearfix">
+            <h5 class="title">3 Comments</h5>
+
+            <ol>
+              <!-- Single Comment Area -->
+              <li class="single_comment_area">
+                <!-- Comment Content -->
+                <div class="comment-content d-flex">
+                  <!-- Comment Author -->
+                  <div class="comment-author">
+                    <img src="{% static 'website/img/bg-img/26.jpg' %}" alt="author">
+                  </div>
+                  <!-- Comment Meta -->
+                  <div class="comment-meta">
+                    <a href="#" class="post-author">Tom Hardy / <span>10 April at 14:00 pm</span></a>
+                    <p>Came in to get my teeth cleaned and cavity filled and I was given the best service. They have TV's so you can watch a movie as you get your teeth worked on which is a nice convenience. The staff is excellent and super friendly</p>
+                    <a href="#" class="comment-reply">Reply</a>
+                  </div>
+                </div>
+                <ol class="children">
+                  <li class="single_comment_area">
+                    <!-- Comment Content -->
+                    <div class="comment-content d-flex">
+                      <!-- Comment Author -->
+                      <div class="comment-author">
+                        <img src="{% static 'website/img/bg-img/27.jpg' %}" alt="author">
+                      </div>
+                      <!-- Comment Meta -->
+                      <div class="comment-meta">
+                        <a href="#" class="post-author">Samantha Harvey / <span>4 April 2021 at 10:30 am</span></a>
+                        <p>So for Going on two years now I've been been given the runaround by half a dozen different dentist, oral surgeons, prosthodontists and any other medical professional that works on your mouth and or teeth, trying to get myself dentures. (Keep in mind I'm in my mid 20s, not as some senior citizen so not having teeth is kind of a big effing deal.</p>
+                        <a href="#" class="comment-reply">Reply</a>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </li>
+
+              <!-- Single Comment Area -->
+              <li class="single_comment_area">
+                <!-- Comment Content -->
+                <div class="comment-content d-flex">
+                  <!-- Comment Author -->
+                  <div class="comment-author">
+                    <img src="{% static 'website/img/bg-img/28.jpg' %}" alt="author">
+                  </div>
+                  <!-- Comment Meta -->
+                  <div class="comment-meta">
+                    <a href="#" class="post-author">Jonny Evans / <span>2 April 2021 at 11:00 am</span></a>
+                    <p>I started seeing Victor the last 2 months of 2018 and on short notice he was able to be a MIRACLE WORKER! I haven't been to the dentist in YEARS and Victor was not only transparent discussing what needed to be done to my mouth, he also went ABOVE AND BEYOND for me! Removed a massive tooth growing in the wrong direction which could've been bad for me in the long run. </p>
+                    <a href="#" class="comment-reply">Reply</a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Leave A Reply -->
+          <div class="contact-form mt-30">
+            <h5 class="mb-30">Leave A Reply</h5>
+
+            <!-- Form -->
+            <form action="#" method="post">
+            {% csrf_token %}
+              <div class="row">
+                <div class="col-lg-6">
+                  <input type="text" name="message_name" class="form-control mb-30" placeholder="Your Name">
+                </div>
+                <div class="col-lg-6">
+                  <input type="email" name="message_email" class="form-control mb-30" placeholder="Your Email">
+                </div>
+                <div class="col-12">
+                  <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn dento-btn">Reply</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Dento Sidebar Area -->
+        <div class="col-12 col-lg-4">
+          <div class="dento-sidebar">
+
+            <!-- Single Widget Area -->
+            <div class="single-widget-area search-widget">
+              <form action="#" method="post">
+                <input type="search" name="search" class="form-control" placeholder="Search ...">
+                <button type="submit"><i class="icon_search"></i></button>
+              </form>
+            </div>
+
+            <!-- Single Widget Area -->
+            <div class="single-widget-area catagories-widget">
+              <h5 class="widget-title">Categories</h5>
+
+              <!-- catagories list -->
+              <ul class="catagories-list">
+                <li><a href="{% url 'dentistry' %}">Dentistry Articles</a></li>
+                <li><a href="#">Oral Health</a></li>
+                <li><a href="#">Dental Technology</a></li>
+                <li><a href="#">Kids Care Dental</a></li>
+                <li><a href="#">Healthy Smiles, Inside &amp; Out</a></li>
+              </ul>
+            </div>
+
+            <!-- Single Widget Area -->
+            <div class="single-widget-area news-widget">
+              <h5 class="widget-title">Recent News</h5>
+
+              <!-- Single News Area -->
+              <div class="single-news-area d-flex align-items-center">
+                <div class="blog-thumbnail">
+                  <img src="{% static 'website/img/bg-img/21.jpg' %}" alt="">
+                </div>
+                <div class="blog-content">
+                  <a href="#" class="post-title">Tooth decay: why good dental hygiene is important</a>
+                  <span class="post-date">28 Sep 2018</span>
+                </div>
+              </div>
+
+              
+
+              <!-- Single News Area -->
+              <div class="single-news-area d-flex align-items-center">
+                <div class="blog-thumbnail">
+                  <img src="{% static 'website/img/bg-img/23.jpg' %}" alt="">
+                </div>
+                <div class="blog-content">
+                  <a href="#" class="post-title">Everything you need to know about sinus infection</a>
+                  <span class="post-date">28 Sep 2018</span>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ****** Blog Area End ******* -->
+{% endblock %}

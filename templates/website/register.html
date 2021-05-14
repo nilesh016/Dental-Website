@@ -1,0 +1,137 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}    
+	
+	
+	
+	<link href="{% static 'website/auth/main.css' %}" rel="stylesheet">
+	<link href="{% static 'website/auth/main.min.css' %}" rel="stylesheet">
+    <script src= "{% static 'website/auth/global.js' %}" type="text/javascript"></script> 
+	
+	
+	<!-- Jquery JS-->
+     <script src="website/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+      <script src="webiste/vendor/select2/select2.min.js"></script>
+     
+    
+
+
+    <!-- Icons font CSS-->
+    
+    <link href="website/fonts/font-awesome.min.css" rel="stylesheet" media="all"> 
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+     <link href="webiste/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    
+
+   
+
+
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Dento Registration Form</h2>
+                    {% include "website/_messages.html" %}
+              <form action="{% url 'register' %}" method="POST">
+						{% csrf_token %}
+                </div>
+                <div class="card-body">
+                   
+                        <div class="form-row m-b-55">
+                            <div class="name">Name</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-5">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="first_name">
+                                            <label class="label--desc">First name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="last_name">
+                                            <label class="label--desc">Last name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Password</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="password" name="password1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Confirm Password</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="password" name="password2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Username</div>
+                            <div class="value">
+                                <div class="row row-refine">
+                                    <div class="col-0">
+                                        <div class="input-group-desc">
+                                           
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="username">
+                                            <label class="label--desc"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Are you an existing customer?</label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-55">Yes
+                                    <input type="radio" checked="checked" name="exist">
+                                    <span class="checkmark"></span>
+                                     
+                                </label>
+                                <label class="radio-container">No
+                                    <input type="radio" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class='text-center'>
+                        
+                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                            <li><a class="mt-5 btn btn--radius-2 btn--red" href="{% url 'login' %}" style='text-align:center'>Login from here</a></li>
+                        </div>
+                     </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+   
+    

@@ -1,0 +1,118 @@
+{% extends 'website/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+
+	
+<!--===============================================================================================-->	
+	<link rel="icon"  href="{% static 'website/js/images/login.jpg' %}"/>
+	
+	<!--===============================================================================================-->
+	
+	<link href="{% static 'website/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<!--===============================================================================================-->
+	<link href="{% static 'website/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet">
+<!--===============================================================================================-->
+	<link href="{% static 'website/vendor/animate/animate.css' %}" rel="stylesheet">
+<!--===============================================================================================-->	
+	<link href="{% static 'website/vendor/css-hamburgers/hamburgers.min.css' %}" rel="stylesheet">
+
+<!--===============================================================================================-->
+	
+	<link href="{% static 'website/vendor/select2/select2.min.css' %}" rel="stylesheet">
+
+
+
+<!--===============================================================================================-->
+
+	<link href="{% static 'website/css/util.css' %}" rel="stylesheet">
+	
+	<link href="{% static 'website/css/main.css' %}" rel="stylesheet">
+
+<!--===============================================================================================-->
+
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img   src="{% static 'website/js/images/login.png' %}" />
+				</div>
+              
+				<form class="login100-form validate-form" method="POST" action="{% url 'login' %}">
+				     {% csrf_token %}
+					<span class="login100-form-title">
+					 {% include "website/_messages.html" %}
+						Member Login
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid username is required">
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="{%url  'register' %}">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="{% static 'website/vendor/jquery/jquery-3.2.1.min.js' %}"></script> 
+	
+<!--===============================================================================================-->
+	<script src="{% static 'website/vendor/bootstrap/js/popper.js' %}"></script> 
+	<script src="{% static 'website/vendor/bootstrap/js/bootstrap.min.js' %}"></script> 
+<!--===============================================================================================-->
+	<script src="{% static 'website/vendor/select2/select2.min.js' %}"></script> 
+<!--===============================================================================================-->
+	<script src="{% static 'website/vendor/tilt/tilt.jquery.min.js' %}"></script> 
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'website/js/main.js'%}">type="text/javascript"></script> 
+
+
+
+{% endblock %}

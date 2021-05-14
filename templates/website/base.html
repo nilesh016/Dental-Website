@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Dento - Dentist &amp; Medical HTML Template">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Dento</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'website/img/core-img/favicon.ico' %}">
+
+  <!-- Core Stylesheet -->
+  <link type="text/css" rel="stylesheet" href="{% static 'website/style.css' %}">
+
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preload-content">
+      <div id="dento-load"></div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area">
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <!-- Top Content -->
+          <div class="col-6 col-md-9 col-lg-8">
+            <div class="top-header-content">
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title=""><i class="fa fa-map-marker"></i> <span>
+                  Marol Maroshi Rd, Shivaji Nagar JJC, Marol, Andheri East, Mumbai, Maharashtra 400059</span></a>
+              <a  target="_blank" href="mailto:dentoclean01@gmail.com" data-toggle="tooltip" data-placement="bottom" title="dentoclean01@gmail.com"><i class="fa fa-envelope"></i> <span>dentoclean01@gmail.com</span></a>
+            </div>
+          </div>
+          <!-- Top Header Social Info -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <div class="top-header-social-info text-right">
+              
+              <a  target='_blank' href="https://twitter.com" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+              
+              <a target='_blank' href="https://linkedin.com" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+              <a  target='_blank' href="https://pintrest.com" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Header End -->
+
+    <!-- Main Header Start -->
+    <div class="main-header-area">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+          <!-- Classy Menu -->
+          <nav class="classy-navbar justify-content-between" id="dentoNav">
+
+            <!-- Logo -->
+            <a class="nav-brand" href="{% url 'home' %}"><img src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
+
+            <!-- Navbar Toggler -->
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+
+            <!-- Menu -->
+            <div class="classy-menu">
+
+              <!-- Close Button -->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+
+              <!-- Nav Start -->
+              <div class="classynav">
+                <ul id="nav">
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="#">Pages</a>
+                    <ul class="dropdown">
+                      <li><a href="{% url 'home' %}">- Home</a></li>
+                      <li><a href="{% url 'about' %}">- About Us</a></li>
+                      <li><a href="{% url 'service' %}">- Service</a></li>
+                      <li><a href="{% url 'pricing' %}">- Pricing</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog</a></li>
+                      <li><a href="{% url 'blog_details' %}">- Blog Details</a></li>
+                      <li><a href="{% url 'contact' %}">- Contact</a></li>
+                        <ul class="dropdown">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'service' %}">Service</a></li>
+                  <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                  <li><a href="#">Blog</a>
+                    <ul class="dropdown">
+                      <li><a href="{% url 'blog' %}">- Blog</a></li>
+                      <li><a href="{% url 'blog_details' %}">- Blog Details</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
+                  {% if request.user.is_authenticated %}
+                  <li><a href="{% url 'logout' %}">Logout</a></li>
+                  {% else %}
+                  
+                  <li><a href="{% url 'login' %}">Login</a></li>
+                  <li><a href="{% url 'register' %}">Register</a></li>
+                  
+                  {% endif %}
+
+
+                
+                </ul>
+              </div>
+              <!-- Nav End -->
+            </div>
+
+            <!-- Booking Now Button -->
+            <a href="{% url 'contact' %}" class="btn dento-btn booking-btn">Booking Now</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  {% block content %}
+  {% endblock %}
+
+  <!-- ***** Footer Area Start ***** -->
+  <footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url({%static 'website/img/bg-img/3.jpg' %});">
+    <div class="container">
+      <div class="row">
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-footer-widget">
+            <a href="{% url 'home' %}" class="d-block mb-4"><img src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
+            <p></p>
+            <div class="footer-contact">
+              <p><i class="icon_pin"></i>Marol Maroshi Rd, Shivaji Nagar JJC, Marol, Andheri East, Mumbai, Maharashtra 400059</p>
+              <p><i class="icon_phone"></i> 1800-22-4466</p>
+              <a  target="_blank" href="mailto:dentoclean01@gmail.com" data-toggle="tooltip" data-placement="bottom" title="dentoclean01@gmail.com"><i class="fa fa-envelope"></i> <span>dentoclean01@gmail.com</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title">Opening Hours</h5>
+
+            <!-- Opening Hours -->
+            <ul class="opening-hours">
+              <li><span>Mon-Wed</span> <span>8.00-18.00</span></li>
+              <li><span>Thu-Fri</span> <span>8.00-18.00</span></li>
+              <li><span>Sat</span> <span>9.00-17.00</span></li>
+              <li><span>Sun</span> <span>10.00-14.00</span></li>
+              <li><span>National Holiday</span> <span>Closed</span></li>
+            </ul>
+          </div>
+        </div>
+
+        
+
+           
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            <!-- Widget Title -->
+            <h5 class="widget-title">Newsletter</h5>
+
+            <p>We will send out weekly newest article and some great offers</p>
+            <!-- Newsletter Form -->
+            <div class="footer-newsletter-form">
+              <form action="#" method="post">
+                 {% csrf_token %}
+                <input type="email" name="nl-email" value="" placeholder="Email Address">
+                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+              </form>
+            </div>
+
+            <!-- Social Info -->
+            <div class="footer-social-info">
+              <a target='_blank'    href="https://facebook.com" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a  target='_blank'   href="https://twitter.com" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <a  target='_blank'   href="https://googleplus.com" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+              <a    target='_blank' href="https://linkedin.com" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+              <a   target='_blank'  href="https://pintrest.com" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+  <!-- ******* All JS ******* -->
+  <!-- jQuery js -->
+  <script src="{% static 'website/js/jquery.min.js' %}"></script>
+  <!-- Popper js -->
+  <script src="{% static 'website/js/popper.min.js' %}"></script>
+  <!-- Bootstrap js -->
+  <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+  <!-- All js -->
+  <script src="{% static 'website/js/dento.bundle.js' %}"></script>
+  <!-- Active js -->
+  <script src="{% static 'website/js/default-assets/active.js' %}"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
