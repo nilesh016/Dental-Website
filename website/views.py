@@ -44,31 +44,20 @@ def blog_details(request):
         name = request.POST['message_name']
         email = request.POST['message_email']
         message = request.POST['message']
-        Reply.objects.create(name=name,message=message,email=email)
+        if request.user.is_authenticated:
+            Reply.objects.create(name=name,message=message,email=email)
+            messages.success(request, 'SAVED')
+            return redirect('blog_details')
+        else:
+            messages.error(request,'YOU SHOULD BE LOGGED IN')
+            return redirect('login')
         
-        #send email to default address
-        send_mail(
-            'Follow up required for - ' + name,
-            message,
-            email,
-            [conf_settings.CONTACT_US_FORM_EMAIL_TO],
-            fail_silently=False,
-        )
 
-        messages.success(request, f' {message} SAVED')
-        return redirect('blog_details')
+        
     else:
         return render(request, 'website/blog_details.html')
 
 
-        
-
-     
-
-      
-
-
-    
 
 def dentistry(request):
     return render(request, 'website/dentistry.html')

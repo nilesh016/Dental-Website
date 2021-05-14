@@ -118,7 +118,7 @@ This information may seem concerning. But the good news is that preventive care 
                   <!-- Comment Meta -->
                   <div class="comment-meta">
                     <a href="#" class="post-author">Jonny Evans / <span>2 April 2021 at 11:00 am</span></a>
-                    <p>I started seeing Victor the last 2 months of 2018 and on short notice he was able to be a MIRACLE WORKER! I haven't been to the dentist in YEARS and Victor was not only transparent discussing what needed to be done to my mouth, he also went ABOVE AND BEYOND for me! Removed a massive tooth growing in the wrong direction which could've been bad for me in the long run. </p>
+                    <p>I started seeing Victor the last 2 months of 2021 and on short notice he was able to be a MIRACLE WORKER! I haven't been to the dentist in YEARS and Victor was not only transparent discussing what needed to be done to my mouth, he also went ABOVE AND BEYOND for me! Removed a massive tooth growing in the wrong direction which could've been bad for me in the long run. </p>
                     <a href="#" class="comment-reply">Reply</a>
                   </div>
                 </div>
@@ -131,6 +131,7 @@ This information may seem concerning. But the good news is that preventive care 
             <h5 class="mb-30">Leave A Reply</h5>
 
             <!-- Form -->
+            {% include "website/_messages.html" %}
             <form action="#" method="post">
             {% csrf_token %}
               <div class="row">
@@ -170,11 +171,11 @@ This information may seem concerning. But the good news is that preventive care 
 
               <!-- catagories list -->
               <ul class="catagories-list">
-                <li><a href="{% url 'dentistry' %}">Dentistry Articles</a></li>
-                <li><a href="#">Oral Health</a></li>
-                <li><a href="#">Dental Technology</a></li>
-                <li><a href="#">Kids Care Dental</a></li>
-                <li><a href="#">Healthy Smiles, Inside &amp; Out</a></li>
+                <li><a target='_blank' href="https://www.dentistry.com/articles/">Dentistry Articles</a></li>
+                <li><a target='_blank' href="https://www.cdc.gov/oralhealth/basics/index.html">Oral Health</a></li>
+                <li><a target='_blank' href="https://dentaltech.com/">Dental Technology</a></li>
+                <li><a target='_blank' href="https://www.cdc.gov/oralhealth/publications/features/childrens-dental-health.html">Kids Care Dental</a></li>
+                <li><a target='_blank' href="https://www.healthysmilesdentists.com/">Healthy Smiles, Inside &amp; Out</a></li>
               </ul>
             </div>
 
@@ -188,8 +189,8 @@ This information may seem concerning. But the good news is that preventive care 
                   <img src="{% static 'website/img/bg-img/21.jpg' %}" alt="">
                 </div>
                 <div class="blog-content">
-                  <a href="#" class="post-title">Tooth decay: why good dental hygiene is important</a>
-                  <span class="post-date">28 Sep 2018</span>
+                  <a target='_blank' href="https://www.chartercollege.edu/news-hub/3-reasons-good-dental-hygiene-so-important" class="post-title">Tooth decay: why good dental hygiene is important</a>
+                  <span class="post-date">3 March 2021</span>
                 </div>
               </div>
 
@@ -201,8 +202,8 @@ This information may seem concerning. But the good news is that preventive care 
                   <img src="{% static 'website/img/bg-img/23.jpg' %}" alt="">
                 </div>
                 <div class="blog-content">
-                  <a href="#" class="post-title">Everything you need to know about sinus infection</a>
-                  <span class="post-date">28 Sep 2018</span>
+                  <a target='_blank' href="https://en.wikipedia.org/wiki/Sinusitis" class="post-title">Everything you need to know about sinus infection</a>
+                  <span class="post-date">28 April 2021</span>
                 </div>
               </div>
             </div>

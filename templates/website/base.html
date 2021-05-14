@@ -36,7 +36,7 @@
           <!-- Top Content -->
           <div class="col-6 col-md-9 col-lg-8">
             <div class="top-header-content">
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title=""><i class="fa fa-map-marker"></i> <span>
+              <a href="{%url 'contact' %}" data-toggle="tooltip" data-placement="bottom" title=""><i class="fa fa-map-marker"></i> <span>
                   Marol Maroshi Rd, Shivaji Nagar JJC, Marol, Andheri East, Mumbai, Maharashtra 400059</span></a>
               <a  target="_blank" href="mailto:dentoclean01@gmail.com" data-toggle="tooltip" data-placement="bottom" title="dentoclean01@gmail.com"><i class="fa fa-envelope"></i> <span>dentoclean01@gmail.com</span></a>
             </div>
@@ -124,7 +124,7 @@
             </div>
 
             <!-- Booking Now Button -->
-            <a href="{% url 'contact' %}" class="btn dento-btn booking-btn">Booking Now</a>
+            <a href="{%url 'home' %}" class="btn dento-btn booking-btn">Booking Now</a>
           </nav>
         </div>
       </div>
@@ -181,10 +181,8 @@
             <p>We will send out weekly newest article and some great offers</p>
             <!-- Newsletter Form -->
             <div class="footer-newsletter-form">
-              <form action="#" method="post">
-                 {% csrf_token %}
-                <input type="email" name="nl-email" value="" placeholder="Email Address">
-                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+              
+                
               </form>
             </div>
 
@@ -195,6 +193,7 @@
               <a  target='_blank'   href="https://googleplus.com" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a>
               <a    target='_blank' href="https://linkedin.com" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
               <a   target='_blank'  href="https://pintrest.com" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+              <a   target='_blank'  href="https://telegram.com" data-toggle="tooltip" data-placement="top" title="Telegram"><i class="fa fa-telegram"></i></a>
             </div>
           </div>
         </div>
